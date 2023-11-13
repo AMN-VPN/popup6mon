@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Popup Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #00f6ff;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    button {
+      font-size: 200%; /* اندازه دکمه دو برابر بزرگتر */
+      background-color: #ed1968; /* رنگ پس زمینه دکمه قرمز */
+      color: white; /* رنگ متن دکمه سفید */
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #popup {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background-color: white;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      z-index: 999;
+      text-align: center;
+    }
+
+    #popup img {
+      width: 80%;
+      max-width: 300px;
+      height: auto;
+      display: block;
+      margin: 10px auto;
+    }
+
+    #popup-text {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    #close-btn {
+      background-color: #333;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 576px) {
+      #popup {
+        width: 100%;
+        max-width: none;
+        left: 0;
+        transform: translate(0, -50%);
+      }
+
+      #popup img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+      }
+
+      #close-btn {
+        font-size: 16px;
+        padding: 5px 10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+    <button onclick="openPopup()">جهت پرداخت کلیک کنید</button>
+
+    <div id="popup">
+        <p id="popup-text">خرید آسان - روش های مختلف پرداخت جهت راحتی کاربران</p>
+        <img src="https://raw.githubusercontent.com/AMN-VPN/AMN-VPN.github.io/fd14e3f4a40e2dc7d8295145dc838a33d3e2fb3e/%D9%88%D8%A7%D8%B1%DB%8C%D8%B2-%D8%A8%D8%A7-%D8%AE%D8%B1%DB%8C%D8%AF-%D8%A2%D9%86%D9%84%D8%A7%DB%8C%D9%86.jpg"
+            alt="Image 1" onclick="window.location.href='https://giftchi.site/index.php/product/free-fire-usd/'">
+        <img src="https://raw.githubusercontent.com/AMN-VPN/AMN-VPN.github.io/3394f5ea7187427fe738c611700dd5ad28b06804/%D9%88%D8%A7%D8%B1%DB%8C%D8%B2-%D8%A8%D8%A7-%D8%AE%D8%B1%DB%8C%D8%AF-%D9%88%D9%88%D9%88%DA%86%D8%B1.jpg"
+            alt="Image 2" onclick="window.location.href='https://amngroup.online/shop/?add-to-cart=597'">
+        <img src="https://raw.githubusercontent.com/AMN-VPN/AMN-VPN.github.io/05649ea53cda82673c5d1f923b6626d7a684f3a2/%D9%88%D8%A7%D8%B1%DB%8C%D8%B2-%D8%A8%D8%A7-%D8%AE%D8%B1%DB%8C%D8%AF-%D8%A7%D8%B1%D8%B2-%D8%AF%DB%8C%D8%AC%DB%8C%D8%AA%D8%A7%D9%84.jpg"
+            alt="Image 3" onclick="window.location.href='https://amngroup.online/shop/?add-to-cart=597'">
+        <button id="close-btn" onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        function openPopup() {
+            document.getElementById('popup').style.display = 'block';
+        }
+
+        function closePopup() {
+            document.getElementById('popup').style.display = 'none';
+        }
+    </script>
+
+</body>
+
+</html>
